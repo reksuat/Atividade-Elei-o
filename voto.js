@@ -1,33 +1,34 @@
-module.exports = {
-    voto1: voto1,
-    voto2: voto2,
-    voto3: voto3,
-    voto4: voto4
-}
-// let candidato1 = 0;
-// let candidato2 = 0;
-// let candidato3 = 0;
-// let candidato4 = 0
-function voto1() {
-    let candidato1 = 0;
-    candidato1 += 1; 
-    return candidato1; 
-}
-function voto2() {
-    let candidato2 = 0;
-    candidato2+=1;
-    return candidato2
-}
-function voto3() {
-    let candidato3 = 0;
-    candidato3+=1;
-        return candidato3
+module.exports= Adicionar;
+function Adicionar(add) {
+    const prompt = require("prompt-sync")({ sigint: true });
+    let vote = prompt(`
+        //      Em qual Candidato irá votar
+        //      1- Oliver Oliveira
+        //      2- Nick Saci
+        //      3- Tica da Silva
+        //      4- Ambrózio
+        `);
+       switch (vote) {
+        case "1":
+            add.push( candidato: "Oliver Oliveira");
+            console.log("Votou em Oliver Oliveira");
+            break;
+        case "2":
+            add.push({ candidato: "Nick Saci"});
+            console.log("Votou em Nick Saci");
+            break;
+            case "3":
+                add.push({ candidato: "Tica da Silva"});
+                console.log("Votou em Tica da Silva");
+                break;
+                case "4":
+                    add.push({ candidato: "Ambrózio"});
+                    console.log("Votou em Ambrózio");
+                    break;
+        default:
+            console.log("Inválido");
+            break;
+       }
+       return add;
+
     }
-function voto4() {
-    candidato4 = 0;
-    candidato4+=1;
-        return candidato4
-}
-function leitura() {
-    
-}
